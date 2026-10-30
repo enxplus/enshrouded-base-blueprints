@@ -1,0 +1,184 @@
+[
+  {
+    "material": "stone",
+    "asset": "Bricks066",
+    "author": "ambientCG / Lennart Demes",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://docs.ambientcg.com/license/",
+    "source": "https://ambientcg.com/a/Bricks066",
+    "download": "https://ambientcg.com/get?file=Bricks066_1K-JPG.zip",
+    "files": {
+      "color": {
+        "path": "assets/textures/stone-color.jpg",
+        "bytes": 795752,
+        "sha256": "3a5b51dce8b672cbe022537d51c3cabf7af116d8e2e258e5da45b734fe02eca9"
+      },
+      "normal": {
+        "path": "assets/textures/stone-normal.jpg",
+        "bytes": 1846446,
+        "sha256": "2c6fede28d4f5a5fd6228b3114ad6363da766e154389e442573bed9e860c0e54"
+      },
+      "roughness": {
+        "path": "assets/textures/stone-roughness.jpg",
+        "bytes": 391789,
+        "sha256": "aba34eacf347961cb3a606f80a52260c5b978b27451df8df6d99a57f6787be50"
+      }
+    }
+  },
+  {
+    "material": "wood",
+    "asset": "Wood051",
+    "author": "ambientCG / Lennart Demes",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://docs.ambientcg.com/license/",
+    "source": "https://ambientcg.com/a/Wood051",
+    "download": "https://ambientcg.com/get?file=Wood051_1K-JPG.zip",
+    "files": {
+      "color": {
+        "path": "assets/textures/wood-color.jpg",
+        "bytes": 871537,
+        "sha256": "f3c6c5456457e8d05c1fee4d2f186f41d0aea2b8a06859b69ce2934e11aa8798"
+      },
+      "normal": {
+        "path": "assets/textures/wood-normal.jpg",
+        "bytes": 1583401,
+        "sha256": "9078dc50c43b55831ae322460fc96b62df68c7a148400bd7755ab2788fec1708"
+      },
+      "roughness": {
+        "path": "assets/textures/wood-roughness.jpg",
+        "bytes": 680793,
+        "sha256": "b5736b940d721b49922cb14eebd52fd34f134b7ef99331ecf28565ce40358098"
+      }
+    }
+  },
+  {
+    "material": "roof",
+    "asset": "RoofingTiles001",
+    "author": "ambientCG / Lennart Demes",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://docs.ambientcg.com/license/",
+    "source": "https://ambientcg.com/a/RoofingTiles001",
+    "download": "https://ambientcg.com/get?file=RoofingTiles001_1K-JPG.zip",
+    "files": {
+      "color": {
+        "path": "assets/textures/roof-color.jpg",
+        "bytes": 998380,
+        "sha256": "e4cd7ab4c26444c5108bb7161b1085ca703c2a122cf83649409cd756fbe905b0"
+      },
+      "normal": {
+        "path": "assets/textures/roof-normal.jpg",
+        "bytes": 2029456,
+        "sha256": "6aeb3936d1e3d6cba0387f47f5b8a324870157314318341acc460f8a9b77692d"
+      },
+      "roughness": {
+        "path": "assets/textures/roof-roughness.jpg",
+        "bytes": 769844,
+        "sha256": "a49985868ce4fe241cea0fda59ce7db0a5fd9d7df75bc9f99a67c106a67b4607"
+      }
+    }
+  },
+  {
+    "material": "plaster",
+    "asset": "Plaster001",
+    "author": "ambientCG / Lennart Demes",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://docs.ambientcg.com/license/",
+    "source": "https://ambientcg.com/a/Plaster001",
+    "download": "https://ambientcg.com/get?file=Plaster001_1K-JPG.zip",
+    "files": {
+      "color": {
+        "path": "assets/textures/plaster-color.jpg",
+        "bytes": 828790,
+        "sha256": "d3fe43282859ab7293ad41f2fa3c29f02df077e5bc326cf90a65cc588a4ac5a4"
+      },
+      "normal": {
+        "path": "assets/textures/plaster-normal.jpg",
+        "bytes": 2091491,
+        "sha256": "ea293c335a0b9243f0a825573b81304b8f99e60b2c067e493d0792adf96dfc72"
+      },
+      "roughness": {
+        "path": "assets/textures/plaster-roughness.jpg",
+        "bytes": 367391,
+        "sha256": "6028dbe3cb2ea250eacf3fb87d2c4e5ae8c2a7ff10ecad7883c27d721f2f8e88"
+      }
+    }
+  },
+  {
+    "material": "grass",
+    "asset": "Grass001",
+    "author": "ambientCG / Lennart Demes",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://docs.ambientcg.com/license/",
+    "source": "https://ambientcg.com/a/Grass001",
+    "download": "https://ambientcg.com/get?file=Grass001_1K-JPG.zip",
+    "files": {
+      "color": {
+        "path": "assets/textures/grass-color.jpg",
+        "bytes": 1764300,
+        "sha256": "b9b6d61bc3b6137b868a3447eef18737896acd26d58fe2f4b83ce8c0e9d3f8ad"
+      },
+      "normal": {
+        "path": "assets/textures/grass-normal.jpg",
+        "bytes": 2338245,
+        "sha256": "eef0b56db5f00a6fcb3d0e0f8463e4e141e88aa85b26527a04d617b75a4ab5d2"
+      },
+      "roughness": {
+        "path": "assets/textures/grass-roughness.jpg",
+        "bytes": 823623,
+        "sha256": "8810effd44756341170d551501b7d0c645dc2395dbce46a8c7f1e61045258a06"
+      }
+    }
+  },
+  {
+    "material": "soil",
+    "asset": "Ground037",
+    "author": "ambientCG / Lennart Demes",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://docs.ambientcg.com/license/",
+    "source": "https://ambientcg.com/a/Ground037",
+    "download": "https://ambientcg.com/get?file=Ground037_1K-JPG.zip",
+    "files": {
+      "color": {
+        "path": "assets/textures/soil-color.jpg",
+        "bytes": 2187764,
+        "sha256": "d92bec8a35b9cb16ec79b421ca0f572a7400286eae109beafa266629ef49a6cf"
+      },
+      "normal": {
+        "path": "assets/textures/soil-normal.jpg",
+        "bytes": 2474236,
+        "sha256": "ea59dbdcfa5bf2f28bdd4aa896d4e5f96c4cce5939100dcc6db4bbbcdebfe38d"
+      },
+      "roughness": {
+        "path": "assets/textures/soil-roughness.jpg",
+        "bytes": 694944,
+        "sha256": "3786b088e981aae562f06b6477972d379cffd09a5cc542ab42f9ffd94f9bcb0e"
+      }
+    }
+  },
+  {
+    "material": "rock",
+    "asset": "Rock051",
+    "author": "ambientCG / Lennart Demes",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://docs.ambientcg.com/license/",
+    "source": "https://ambientcg.com/a/Rock051",
+    "download": "https://ambientcg.com/get?file=Rock051_1K-JPG.zip",
+    "files": {
+      "color": {
+        "path": "assets/textures/rock-color.jpg",
+        "bytes": 1584524,
+        "sha256": "92bdd9212a6d5c6dcc7a143130e51f8b2eceeb1410825714e1565b1bc1102445"
+      },
+      "normal": {
+        "path": "assets/textures/rock-normal.jpg",
+        "bytes": 2102099,
+        "sha256": "b1b205a519b6fd139a8bcc8e78bbe55ea5c7cf4e5151924b270372b827a653fb"
+      },
+      "roughness": {
+        "path": "assets/textures/rock-roughness.jpg",
+        "bytes": 577866,
+        "sha256": "6b1c6ea866c845836b1eaccf9c6a36111043ecc085c9de648a17854fb7b57d32"
+      }
+    }
+  }
+]

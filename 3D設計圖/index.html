@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>霧鎖王國 · 日式城郭 3D 施工圖</title>
+<link rel="stylesheet" href="style.css"><link rel="stylesheet" href="visual.css">
+<script defer src="vendor/three.min.js"></script><script defer src="vendor/OrbitControls.js"></script>
+<script defer src="vendor/Sky.js"></script>
+<script defer src="vendor/CopyShader.js"></script><script defer src="vendor/LuminosityHighPassShader.js"></script><script defer src="vendor/FXAAShader.js"></script><script defer src="vendor/GammaCorrectionShader.js"></script>
+<script defer src="vendor/EffectComposer.js"></script><script defer src="vendor/RenderPass.js"></script><script defer src="vendor/ShaderPass.js"></script><script defer src="vendor/UnrealBloomPass.js"></script>
+<script defer src="assets/texture-data.js"></script><script defer src="visuals.js"></script>
+<script defer src="vendor/polygon-clipping.min.js"></script><script defer src="plan.js"></script>
+<script defer src="reference-layout.js"></script><script defer src="reference-scene.js"></script><script defer src="reference-buildings.js"></script><script defer src="app.js"></script>
+</head>
+<body class="immersive">
+<header><div><span class="eyebrow">ENSHROUDED / CASTLE ATLAS · REMASTERED</span><h1>霧鎖王國 · 日式城郭</h1></div><button id="cinematic" aria-pressed="true">顯示施工控制</button><div class="head-meta">160 × 160 × 160 m<span>以祭壇為原點 · 每格 4 m · 北為 +Y</span></div></header>
+<main>
+<aside class="controls">
+<section><h2>01 / 視角導航</h2><div class="buttons"><button data-view="overview" class="active">鳥瞰</button><button data-view="top">俯視放樣</button><button data-view="south">南向立面</button><button data-view="east">東向立面</button></div><label>區域定位<select id="region"><option value="all">全基地</option></select></label><button id="reset">重設全部顯示</button></section>
+<section><h2>02 / 樓層與剖視</h2><label>施工層<select id="floor"><option value="all">全樓層</option><option value="-4">B1 · 金庫 −4 m</option><option value="0">1F · 工坊與地面 0 m</option><option value="4">2F · 閣樓 +4 m</option><option value="8">天守 1F · +8 m</option><option value="16">天守 2F · +16 m</option><option value="24">天守 3F · +24 m</option><option value="32">天守 4F · +32 m</option><option value="40">天守 5F · +40 m</option></select></label><label>水平剖切 <output id="cut-value">+56 m</output><input id="cut" type="range" min="-3" max="56" value="56" step="0.5"></label><label class="check"><input id="roofs" type="checkbox" checked>屋頂與飛簷</label><label class="check"><input id="walls" type="checkbox" checked>外牆（取消以檢視室內）</label><label class="check"><input id="explode" type="checkbox">樓層展開（非實際高程）</label></section>
+<section><h2>03 / 圖層</h2><div id="layers"></div><label class="check"><input id="labels" type="checkbox">區域與選取標籤</label><label class="check"><input id="grid" type="checkbox">4 m 放樣網格與座標</label><label class="check"><input id="bounds" type="checkbox">完整建造邊界 ±80 m</label></section>
+<section><h2>04 / 畫面與環境</h2><label>光照時段<select id="lighting"><option value="day">晴朗日光</option><option value="golden">午後夕照</option><option value="night">月夜與燈火</option></select></label><label>畫質<select id="quality"><option value="high">高 · PBR／柔影／泛光</option><option value="medium">中 · 較低陰影解析度</option><option value="low">低 · 關閉陰影與泛光</option></select></label><label class="check"><input id="effects" type="checkbox" checked>水流／瀑布／火焰／落櫻動畫</label><label class="check"><input id="orbit" type="checkbox">自動環繞</label><p class="muted">視覺特效不代表遊戲水流或機關模擬。材質採 CC0 授權資源。</p></section>
+<section><h2>05 / 尋找配置</h2><label class="sr-only" for="search">搜尋名稱或角色</label><input id="search" type="search" placeholder="農夫、盾牌、滑翔台…"><div id="results" aria-live="polite"></div></section>
+</aside>
+<section id="viewport" aria-label="互動式基地三維施工模型"><div id="loading" role="status">正在建立本機施工模型…</div><div class="view-top"><span id="mode-badge">鳥瞰 / 完工配置</span><div class="scene-actions"><button id="hero">圖 12 鳥瞰</button><button id="all-view">全區鳥瞰</button><button id="plan-view">圖 1 俯視</button><span class="north">N ↑ 正北 +Y</span></div></div><div class="view-bottom"><span>拖曳旋轉 · 滾輪縮放 · 右鍵平移 · 點選物件</span><button id="capture" title="若 IDE 內建瀏覽器沒有下載，請以 Chrome / Edge 開啟此 HTML">下載目前視角 PNG</button></div><div id="coordinates">X 0 / Y 0 / Z 0 m</div><div id="selection-card" hidden aria-live="polite"></div></section>
+<aside class="inspector"><section><h2>配置總覽</h2><div class="stats"><div><strong id="npc-count">28</strong><span>倖存者 / 28 床</span></div><div><strong>5</strong><span>階梯退縮天守</span></div><div><strong>36</strong><span>巨大魔法箱</span></div><div><strong>9 + 6</strong><span>動物種類 / 寵物</span></div></div></section><section id="detail" aria-live="polite"><h2>城郭施工圖</h2><p>點選建築、設備、床位或角色，查看座標、尺寸、樓層與 Wiki 對照。</p><p class="muted">使用 CC0 高解析 PBR 材質、立體屋瓦與動態水流。建築與角色仍非遊戲匯出資產；特效不代表流體、尋路或機關模擬。</p></section><section><h2>圖 1／12 優先的重建版本</h2><p class="muted">三翼分棟、24 棟町家、八級梯田、十塊水田與自然曲水均依整體圖重建，舊細部圖不再覆蓋整體樣貌。</p><a href="../設計圖/01 - 整體平面圖.jpg" target="_blank" rel="noopener">開啟原圖 1 ↗</a> · <a href="../設計圖/12 - 式城郭據點「160m × 160m 全區 3D 等角鳥瞰完工總圖」.jpg" target="_blank" rel="noopener">開啟原圖 12 ↗</a><div id="decisions"></div></section><section><h2>Wiki 建材參考</h2><div id="materials"></div><p class="muted">外觀直接對照 Wiki 的石垣、木框白壁與深色屋瓦；紋理使用 ambientCG 的 CC0 1K 色彩、法線與粗糙度圖，均已存於專案，未複製未確認授權的遊戲圖片。</p><div id="texture-sources"></div><a href="REFERENCE.html" target="_blank" rel="noopener">圖 1／12 重建說明與素材來源 ↗</a></section></aside>
+</main>
+<noscript>需要啟用 JavaScript 才能顯示互動 3D 圖。</noscript>
+</body></html>

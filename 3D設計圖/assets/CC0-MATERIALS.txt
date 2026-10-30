@@ -1,0 +1,9 @@
+The included PBR textures are from ambientCG.com, authored by Lennart Demes.
+All included assets are licensed under Creative Commons CC0 1.0 Universal.
+https://docs.ambientcg.com/license/
+https://creativecommons.org/publicdomain/zero/1.0/
+
+Assets: Bricks066, Wood051, RoofingTiles001, Plaster001, Grass001, Ground037, Rock051
+The local texture-data.js contains unchanged JPG maps encoded as data URLs for offline browsers.
+See material-sources.json for source URLs, file paths and SHA-256 checksums.
+No Keen Games or Enshrouded Wiki image files are included.
